@@ -1,0 +1,55 @@
+
+MONTE CARLO STRESS TESTING - PORTFOLIO RISK ANALYSIS
+====================================================
+
+Simulation Framework:
+  Portfolio size: 168,699 loans
+  Number of simulations: 10,000
+  Model: Logistic regression (Gini 0.394)
+  Base expected default rate: 22.67%
+
+Stress Scenarios Tested:
+
+1. BASE CASE (No Stress)
+   Expected default rate: 22.67%
+   Standard deviation: 0.0010
+   VaR 95%: 22.83%
+   VaR 99%: 22.89%
+   CVaR 95%: 22.87%
+   CVaR 99%: 22.92%
+
+2. RECESSION SCENARIO (All PDs x 1.5)
+   Expected default rate: 34.00%
+   Standard deviation: 0.0010
+   VaR 95%: 34.16%
+   VaR 99%: 34.23%
+   CVaR 95%: 34.21%
+   CVaR 99%: 34.27%
+
+   Impact: +11.3%pp increase in defaults
+
+3. SEGMENT-SPECIFIC STRESS (High-risk 2x stressed)
+   Affected borrowers: 42,174 (25.0%)
+   Expected default rate: 32.53%
+   Standard deviation: 0.0009
+   VaR 95%: 32.68%
+   VaR 99%: 32.74%
+   CVaR 95%: 32.71%
+   CVaR 99%: 32.76%
+
+   Impact: +9.9%pp increase in defaults
+
+Key Insights:
+1. Recession scenario is most severe: defaults rise from 22.7% to 34.0%
+2. High-risk segment concentration risk: top 25% borrowers drive 9.9pp increase
+3. Tail risk (CVaR): In worst 5% scenarios, expect 34.2% defaults under recession
+4. Portfolio has significant downside risk requiring capital buffers
+
+Business Value:
+- Early warning system for capital adequacy
+- Scenario planning for different economic conditions  
+- Portfolio concentration risk identification
+- Risk-adjusted pricing inputs
+- Regulatory stress testing compliance
+
+Status: Ready for risk committee review and capital planning integration

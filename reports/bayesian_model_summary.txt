@@ -1,0 +1,29 @@
+
+BAYESIAN LOGISTIC REGRESSION - UNCERTAINTY QUANTIFICATION
+==========================================================
+
+Model Configuration:
+  Training sample: 50,000 loans (7.5% of full training set)
+  MCMC samples: 2,000 per chain (2 chains)
+  Convergence: Excellent (all R-hat = 1.0)
+
+Performance (Validation Set):
+  AUC: 0.6966
+  Gini: 0.3933
+  (Comparable to frequentist logistic regression)
+
+Uncertainty Quantification:
+  Mean prediction: 22.29%
+  Mean std dev: 0.0060
+  Mean 95% interval width: 0.0235
+
+Key Insight:
+  Higher-risk predictions have higher uncertainty
+  - Low-risk decile: 0.0020 std dev
+  - High-risk decile: 0.0099 std dev
+
+Business Value:
+  Risk managers can identify borderline cases with high uncertainty
+  where manual review provides most value
+
+Status: Bayesian model ready for uncertainty-aware decision making

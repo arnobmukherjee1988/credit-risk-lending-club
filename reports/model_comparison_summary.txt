@@ -1,0 +1,44 @@
+
+MODEL COMPARISON - LOGISTIC vs RANDOM FOREST vs XGBOOST
+========================================================
+
+Performance (Validation Set):
+  Logistic Regression:  Gini = 0.3935
+  Random Forest:        Gini = 0.3939
+  XGBoost:              Gini = 0.4008
+
+Overfitting (Train - Valid Gini):
+  Logistic:       0.0440  (Lowest)
+  Random Forest:  0.0496
+  XGBoost:        0.0510  (Highest)
+
+Feature Importance Insights:
+  All models agree: int_rate, grade, term are key drivers
+
+  Key difference:
+  - Logistic heavily weights home_ownership (23% importance)
+  - ML models prioritize grade (RF: 26%, XGB: 44%)
+
+  Reason: Logistic learns linear combinations of WoE features,
+          ML models capture non-linear interactions better
+
+Key Findings:
+1. XGBoost provides marginal lift (~0.007 Gini improvement)
+2. Similar ranking power but different feature weighting
+3. Logistic shows best generalization (least overfitting)
+
+Production Decision: LOGISTIC REGRESSION
+Rationale:
+  - Performance nearly identical to XGBoost (0.394 vs 0.401 Gini)
+  - Better interpretability for regulatory compliance
+  - Easier governance and explainability to stakeholders
+  - WoE transformation ensures monotonic relationships
+  - Lower computational cost in production
+  - Simpler model monitoring and validation
+
+Use Case for XGBoost:
+  - Challenger model in model validation framework
+  - Benchmark for detecting model degradation
+  - Research on potential feature engineering improvements
+
+Status: Logistic selected for production deployment

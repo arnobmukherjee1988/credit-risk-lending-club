@@ -1,0 +1,34 @@
+
+LOGISTIC REGRESSION MODEL - PERFORMANCE SUMMARY
+================================================
+
+Training Set (2015-2016):
+  Samples: 668,181
+  Default rate: 21.54%
+  AUC: 0.7188
+  Gini: 0.4376
+  KS: 0.3158
+
+Validation Set (2017):
+  Samples: 168,699
+  Default rate: 23.12%
+  AUC: 0.6968
+  Gini: 0.3935
+  KS: 0.2862
+
+Features Used: 10
+  - int_rate_woe
+  - fico_range_low_woe
+  - dti_woe
+  - annual_inc_woe
+  - loan_amnt_woe
+  - inq_last_6mths_woe
+  - revol_util_woe
+  - term_woe
+  - grade_woe
+  - home_woe
+
+Calibration: Excellent (points closely follow diagonal)
+Overfitting: Minimal (Gini difference = 0.0440)
+
+Status: Model ready for deployment
