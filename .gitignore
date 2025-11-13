@@ -69,5 +69,5 @@ ehthumbs.db
 Desktop.ini
 
 # Data files
-data/raw/
-data/processed/
+#data/raw/
+#data/processed/
