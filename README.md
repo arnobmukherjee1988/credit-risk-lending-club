@@ -2,6 +2,10 @@
 
 A credit risk modeling project demonstrating probability of default (PD) prediction for retail lending portfolios, enhanced with Bayesian uncertainty quantification and Monte Carlo stress testing.
 
+![Bayesian Prediction Uncertainty](figures/bayesian_credible_intervals.png)
+
+*Bayesian predictions with 95% credible intervals showing higher uncertainty for high-risk borrowers*
+
 ![Model Performance Comparison](figures/model_comparison_roc.png)
 
 ## Objective
