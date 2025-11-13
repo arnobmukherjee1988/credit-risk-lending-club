@@ -14,11 +14,16 @@ Build a production-grade 12-month probability of default model for retail loans 
 
 ## Data Source
 
-Lending Club accepted loans dataset (2015-2017)
-- Training set: 668,181 loans (2015-2016 originations)
-- Validation set: 168,699 loans (2017 originations)
-- Default rate: 21.5% (training), 23.1% (validation)
-- Features: 151 raw features reduced to 10 WoE-transformed predictors
+**Lending Club Accepted Loans (2007-2018 Q4)**
+
+Download: [Kaggle - Lending Club Loan Data](https://www.kaggle.com/datasets/wordsforthewise/lending-club)
+
+**Setup:**
+1. Download `accepted_2007_to_2018Q4.csv.gz` from Kaggle
+2. Extract the file to get `accepted_2007_to_2018Q4.csv`
+3. Place the `.csv` file in `data/raw/` folder
+
+Dataset: 2.3M loans, 151 features. Project uses 2015-2017 originations (837k loans).
 
 ## Methods
 
