@@ -123,6 +123,9 @@ Production model selected: Logistic Regression (interpretability and governance 
 
 Key finding: Recession scenario shows 11.3 percentage point increase in defaults, informing capital buffer requirements.
 
+## Roadmap
+- Add SHAP summary plot to README
+
 ## License
 
 MIT License
